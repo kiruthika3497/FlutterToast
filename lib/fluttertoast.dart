@@ -34,6 +34,7 @@ class Fluttertoast {
   static Future<bool> showToast({
     @required String msg,
     Toast toastLength,
+    int duration,
     int timeInSecForIos = 1,
     double fontSize = 16.0,
     ToastGravity gravity,
@@ -68,6 +69,7 @@ class Fluttertoast {
       'length': toast,
       'time': timeInSecForIos,
       'gravity': gravityToast,
+      'duration':duration,
       'bgcolor': backgroundColor != null ? backgroundColor.value : null,
       'textcolor': textColor != null ? textColor.value : null,
       'fontSize': fontSize,
