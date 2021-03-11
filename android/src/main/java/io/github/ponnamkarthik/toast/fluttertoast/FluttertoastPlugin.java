@@ -39,11 +39,12 @@ public class FluttertoastPlugin implements MethodCallHandler {
         switch (call.method) {
             case "showToast":
                 String mMessage = call.argument("msg").toString();
-                String length = call.argument("length").toString();
+                //String length = call.argument("length").toString();
                 String gravity = call.argument("gravity").toString();
                 Number bgcolor = call.argument("bgcolor");
                 Number textcolor = call.argument("textcolor");
                 Number textSize = call.argument("fontSize");
+                Number duration = call.argument("duration");
 
                 int mGravity;
                 switch (gravity) {
@@ -58,8 +59,8 @@ public class FluttertoastPlugin implements MethodCallHandler {
                         break;
                 }
                 int mDuration;
-                if (length.equals("long")) {
-                    mDuration = Toast.LENGTH_LONG;
+                if (duration != null) {
+                    mDuration = (Integer) duration;
                 } else {
                     mDuration = Toast.LENGTH_SHORT;
                 }

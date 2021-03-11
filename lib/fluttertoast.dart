@@ -43,10 +43,10 @@ class Fluttertoast {
     // Function(bool) didTap,
   }) async {
     // this.didTap = didTap;
-    String toast = "short";
+  /*  String toast = "short";
     if (toastLength == Toast.LENGTH_LONG) {
       toast = "long";
-    }
+    }*/
 
     String gravityToast = "bottom";
     if (gravity == ToastGravity.TOP) {
@@ -66,7 +66,7 @@ class Fluttertoast {
     }
     final Map<String, dynamic> params = <String, dynamic>{
       'msg': msg,
-      'length': toast,
+      //'length': toast,
       'time': timeInSecForIos,
       'gravity': gravityToast,
       'duration':duration,
