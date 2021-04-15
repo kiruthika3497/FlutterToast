@@ -33,7 +33,6 @@ class Fluttertoast {
 
   static Future<bool> showToast({
     @required String msg,
-    Toast toastLength,
     int duration,
     int timeInSecForIos = 1,
     double fontSize = 16.0,
